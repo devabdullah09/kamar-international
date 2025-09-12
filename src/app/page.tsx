@@ -48,7 +48,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.4 }}
               className="text-lg md:text-xl text-white/90 mb-6 italic drop-shadow-lg text-center"
             >
-              "Because dreams matter"
+              &quot;Because dreams matter&quot;
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}

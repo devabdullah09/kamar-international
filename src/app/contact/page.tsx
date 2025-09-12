@@ -71,7 +71,7 @@ export default function Contact() {
             className="flex justify-center"
           >
             <p className="text-lg text-gray-600 text-center max-w-3xl leading-relaxed">
-              Connect with our team through various channels. We're here to help you realize your dreams and transform your vision into reality.
+              Connect with our team through various channels. We&apos;re here to help you realize your dreams and transform your vision into reality.
             </p>
           </motion.div>
         </motion.div>

@@ -36,7 +36,7 @@ export default function Location() {
             className="flex justify-center"
           >
             <p className="text-lg text-gray-600 max-w-2xl leading-relaxed text-center">
-              Visit our office and experience the magic of dream realization. We're conveniently located and easily accessible from anywhere in the city.
+              Visit our office and experience the magic of dream realization. We&apos;re conveniently located and easily accessible from anywhere in the city.
             </p>
           </motion.div>
         </motion.div>

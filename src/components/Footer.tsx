@@ -1,6 +1,7 @@
 'use client';
 
 import { Mail, Phone, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold">Kamar International</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              "Because dreams matter" - We help transform your dreams into reality through strategic planning and business development.
+              &quot;Because dreams matter&quot; - We help transform your dreams into reality through strategic planning and business development.
             </p>
           </div>
 
@@ -24,10 +25,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="/" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Home</a></li>
-              <li><a href="/department" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Department</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Contact</a></li>
-              <li><a href="/location" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Location</a></li>
+              <li><Link href="/" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Home</Link></li>
+              <li><Link href="/department" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Department</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Contact</Link></li>
+              <li><Link href="/location" className="text-gray-300 hover:text-blushing-peach transition-colors duration-300 text-sm">Location</Link></li>
             </ul>
           </div>
 
