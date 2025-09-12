@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
 
     // Header scroll effect
     const handleScroll = () => {
-      const header = document.querySelector('header > div');
+      const header = document.querySelector('header > div') as HTMLElement;
       if (header) {
         if (window.scrollY > 100) {
           header.style.background = 'rgba(255, 255, 255, 0.98)';
