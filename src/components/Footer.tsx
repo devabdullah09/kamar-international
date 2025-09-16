@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Kamar International</h3>
             <p className="text-gray-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
-              "Because dreams matter" - We are committed to delivering exceptional 
+              &ldquo;Because dreams matter&rdquo; - We are committed to delivering exceptional 
               services and building lasting relationships with our clients worldwide.
             </p>
             <div className="flex space-x-4">

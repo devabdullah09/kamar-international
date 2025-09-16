@@ -55,7 +55,7 @@ export default function Services() {
             Our Services
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-4">
-            Comprehensive solutions designed to drive your success in today's 
+            Comprehensive solutions designed to drive your success in today&apos;s 
             dynamic business environment
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function Services() {
               Our Products & Services
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Comprehensive solutions designed to drive your success in today's 
+              Comprehensive solutions designed to drive your success in today&apos;s 
               dynamic business environment.
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function Services() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our services can help you achieve your goals and drive sustainable growth.
+            Let&apos;s discuss how our services can help you achieve your goals and drive sustainable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg">

@@ -87,7 +87,7 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-4">
-            Ready to transform your vision into reality? Let's start the conversation.
+            Ready to transform your vision into reality? Let&apos;s start the conversation.
           </p>
         </div>
       </section>
@@ -215,7 +215,7 @@ export default function Contact() {
                 Get in Touch
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We're here to help you succeed. Reach out to us through any of the channels below, 
+                We&apos;re here to help you succeed. Reach out to us through any of the channels below, 
                 and our team will respond promptly to discuss your needs.
               </p>
 

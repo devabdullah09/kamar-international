@@ -202,7 +202,7 @@ export default function Location() {
               Global Presence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With strategically located offices around the world, we're always close 
+              With strategically located offices around the world, we&apos;re always close 
               to our clients and ready to provide localized support.
             </p>
           </div>
