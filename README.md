@@ -1,166 +1,36 @@
-# Kamar International - Because dreams matter
-
-A modern, responsive website for Kamar International built with Next.js, TypeScript, and Tailwind CSS.
-
-## Features
-
-- 🎨 **Beautiful Design**: Modern gradient background with floating particles
-- 📱 **Responsive**: Fully responsive design that works on all devices
-- ⚡ **Fast Performance**: Built with Next.js for optimal performance
-- 🎭 **Smooth Animations**: Framer Motion animations for enhanced user experience
-- 📝 **Contact Form**: Functional contact form with validation
-- 🧭 **Smooth Navigation**: Smooth scrolling navigation between sections
-- 📱 **Mobile Menu**: Collapsible mobile navigation menu
-
-## Tech Stack
-
-- **Framework**: Next.js 15
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Deployment**: Vercel (recommended)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18+
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone <repository-url>
-cd kamar-international
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-```
-
-3. Run the development server:
+First, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-kamar-international/
-├── src/
-│   ├── app/
-│   │   ├── globals.css          # Global styles and animations
-│   │   ├── layout.tsx           # Root layout component
-│   │   └── page.tsx             # Main page component
-│   └── utils/
-│       └── formHandler.ts       # Form handling utilities
-├── public/                      # Static assets
-├── package.json
-├── tailwind.config.js
-└── README.md
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Sections
+## Learn More
 
-1. **Hero Section**: Main landing area with company name and tagline
-2. **What We Do**: Services offered by the company
-3. **Who We Are**: About section with company description
-4. **Our Products**: Product showcase section
-5. **Find Us**: Location section with map placeholder
-6. **Contact Us**: Contact form and company details
+To learn more about Next.js, take a look at the following resources:
 
-## Customization
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Colors
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-The main color scheme uses pink gradients. You can customize colors in:
+## Deploy on Vercel
 
-- `src/app/globals.css` - CSS custom properties
-- Tailwind classes throughout the components
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Content
-
-Update the content in `src/app/page.tsx`:
-
-- Company information
-- Services descriptions
-- Contact details
-- Form handling logic
-
-### Styling
-
-Modify styles using Tailwind CSS classes or update `src/app/globals.css` for custom CSS.
-
-## Form Integration
-
-The contact form is currently set up with a mock handler. To integrate with a real backend:
-
-1. Update `src/utils/formHandler.ts` with your API endpoint
-2. Add proper error handling and validation
-3. Consider adding reCAPTCHA for spam protection
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Other Platforms
-
-The app can be deployed to any platform that supports Next.js:
-
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
-
-## Performance Optimizations
-
-- Image optimization with Next.js Image component
-- Code splitting and lazy loading
-- Optimized animations with Framer Motion
-- Responsive images and layouts
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For questions or support, please contact:
-
-- Email: info@kamarinternational.com
-- Phone: +92 XXX XXXXXXX
-
----
-
-Built with ❤️ for Kamar International
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

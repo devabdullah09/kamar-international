@@ -1,143 +1,231 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { MapPin, Navigation } from 'lucide-react';
+import { useState } from 'react';
+import Layout from '@/components/Layout';
 
 export default function Location() {
+  const [selectedOffice, setSelectedOffice] = useState(0);
+
+  const offices = [
+    {
+      name: "Headquarters",
+      address: "123 Business Street, Downtown District",
+      city: "New York, NY 10001",
+      country: "United States",
+      phone: "+1 (555) 123-4567",
+      email: "ny@kamarinternational.com",
+      hours: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 10:00 AM - 4:00 PM", "Sunday: Closed"],
+      coordinates: "40.7128,-74.0060", // New York coordinates
+      description: "Our global headquarters and main operations center, housing our executive team and core departments."
+    },
+    {
+      name: "European Office",
+      address: "456 Europa Plaza, Business District",
+      city: "London, SW1A 1AA",
+      country: "United Kingdom",
+      phone: "+44 20 7123 4567",
+      email: "london@kamarinternational.com",
+      hours: ["Monday - Friday: 8:30 AM - 5:30 PM", "Weekend: By Appointment"],
+      coordinates: "51.5074,-0.1278", // London coordinates
+      description: "Strategic hub for European operations, serving clients across the continent with localized expertise."
+    },
+    {
+      name: "Asia-Pacific Office",
+      address: "789 Business Tower, Central District",
+      city: "Singapore 018989",
+      country: "Singapore",
+      phone: "+65 6123 4567",
+      email: "singapore@kamarinternational.com",
+      hours: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 9:00 AM - 1:00 PM", "Sunday: Closed"],
+      coordinates: "1.3521,103.8198", // Singapore coordinates
+      description: "Gateway to Asia-Pacific markets, providing comprehensive services to clients in the dynamic Asian business environment."
+    }
+  ];
+
+  const currentOffice = offices[selectedOffice];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <div className="container mx-auto px-6 py-16">
-        {/* Header Section - Centered */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-center mb-20"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="mb-8"
-          >
-            <div className="inline-block px-6 py-3 text-gray-600 rounded-full text-sm font-medium mb-6" style={{backgroundColor: '#FAE8E5'}}>
-              Our Location
+    <Layout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 sm:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            Our Locations
+          </h1>
+          <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed px-4">
+            Connect with us at any of our global offices for personalized service and local expertise.
+          </p>
+        </div>
+      </section>
+
+      {/* Office Selection */}
+      <section className="py-8 sm:py-12 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+            {offices.map((office, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedOffice(index)}
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-200 ${
+                  selectedOffice === index
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {office.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Map and Office Details */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
+            {/* Google Maps Placeholder */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gray-200 h-96 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <p className="text-lg font-medium">Google Maps Integration</p>
+                  <p className="text-sm">Interactive map showing {currentOffice.name}</p>
+                  <p className="text-xs mt-2 text-blue-600">
+                    Coordinates: {currentOffice.coordinates}
+                  </p>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {currentOffice.name}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {currentOffice.address}
+                </p>
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+                  Get Directions
+                </button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Find Us
-            </h1>
-            <div className="w-20 h-1 rounded-full mx-auto mb-8" style={{background: 'linear-gradient(to right, #EFA59A, #E68B7D)'}}></div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="flex justify-center"
-          >
-            <p className="text-lg text-gray-600 max-w-2xl leading-relaxed text-center">
-              Visit our office and experience the magic of dream realization. We&apos;re conveniently located and easily accessible from anywhere in the city.
+
+            {/* Office Details */}
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                {currentOffice.name}
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {currentOffice.description}
+              </p>
+
+              <div className="space-y-6">
+                {/* Address */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+                    <p className="text-gray-600">{currentOffice.address}</p>
+                    <p className="text-gray-600">{currentOffice.city}</p>
+                    <p className="text-gray-600">{currentOffice.country}</p>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                    <p className="text-gray-600">{currentOffice.phone}</p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                    <p className="text-gray-600">{currentOffice.email}</p>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
+                    <div className="space-y-1">
+                      {currentOffice.hours.map((hour, index) => (
+                        <p key={index} className="text-gray-600 text-sm">{hour}</p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 mb-3">
+                  Schedule a Visit
+                </button>
+                <button className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+                  Contact This Office
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* All Offices Summary */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Global Presence
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              With strategically located offices around the world, we're always close 
+              to our clients and ready to provide localized support.
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
 
-        {/* Map Section - Enhanced */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="max-w-5xl mx-auto"
-        >
-          <motion.div
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
-            className="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
-          >
-            {/* Map Container */}
-            <div className="relative h-80 lg:h-96 bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600 rounded-3xl overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute inset-0">
-                <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full"></div>
-                <div className="absolute top-20 right-16 w-12 h-12 bg-white/10 rounded-full"></div>
-                <div className="absolute bottom-16 left-20 w-16 h-16 bg-white/10 rounded-full"></div>
-                <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {offices.map((office, index) => (
+              <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {office.name}
+                </h3>
+                <p className="text-gray-600 mb-2">{office.city}</p>
+                <p className="text-gray-600 mb-4">{office.country}</p>
+                <button 
+                  onClick={() => setSelectedOffice(index)}
+                  className="text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
+                >
+                  View Details →
+                </button>
               </div>
-
-              {/* Map Content */}
-              <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-8 py-12">
-                <div className="w-full max-w-lg mx-auto">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="mb-6 flex justify-center"
-                  >
-                    <MapPin className="w-16 h-16 drop-shadow-lg" />
-                  </motion.div>
-                  
-                  <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 1 }}
-                    className="text-2xl lg:text-3xl font-bold mb-4 drop-shadow-lg leading-tight"
-                  >
-                    📍 Kamar International
-                  </motion.h3>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 1.2 }}
-                    className="mb-8"
-                  >
-                    <p className="text-base mb-2 opacity-90 leading-relaxed">Interactive Google Maps Integration</p>
-                    <p className="text-sm opacity-75">Click to open in Google Maps</p>
-                  </motion.div>
-                  
-                  <motion.button
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 1.4 }}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    <Navigation className="w-4 h-4" />
-                    Get Directions
-                  </motion.button>
-                </div>
-              </div>
-
-              {/* Interactive Elements */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
-            
-            {/* Additional Info Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-              className="px-8 py-6 bg-gray-50 border-t border-gray-100 rounded-b-3xl"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-800">Office Hours</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Monday - Friday<br/>9:00 AM - 6:00 PM</p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-800">Address</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Available on request<br/>for security</p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-800">Parking</h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">Free parking<br/>available</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </div>
-    </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 }
