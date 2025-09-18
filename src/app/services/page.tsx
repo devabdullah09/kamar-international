@@ -1,46 +1,103 @@
 import Layout from '@/components/Layout';
 
 export default function Services() {
+  // Hero Video Section Component
+  const HeroVideoSection = () => (
+    <section className="relative h-screen overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source
+            src="hero.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            Pillows. Duvets.
+            <span className="block text-logo-coral-light">Mattress covers.</span>
+          </h1>
+          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-4">
+            Quality textile manufacturing with over 20 years of experience
+            serving customers across Europe.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <button className="bg-logo-coral hover:bg-logo-coral-light text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg">
+              View Our Products
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-200">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="flex flex-col items-center text-white animate-bounce">
+          <span className="text-sm mb-2">Scroll Down</span>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
+    </section>
+  );
+
   const services = [
     {
-      category: "Strategic Consulting",
-      description: "Transform your business with our strategic insights and expert guidance.",
+      category: "Duvets & Pillows",
+      description: "High-quality duvets and pillows ensuring comfort and restful sleep.",
       services: [
         {
-          title: "Business Strategy Development",
-          description: "Comprehensive strategic planning to drive sustainable growth and competitive advantage.",
-          features: ["Market Analysis", "Competitive Intelligence", "Strategic Roadmap", "Implementation Support"]
+          title: "All-Season Duvets",
+          description: "Comfortable duvets adapted to different seasons made from the highest quality materials.",
+          features: ["Hypoallergenic", "Anti-dust mite", "Multiple sizes", "European quality"]
         },
         {
-          title: "Organizational Transformation",
-          description: "Navigate complex changes and optimize your organizational structure for success.",
-          features: ["Change Management", "Process Optimization", "Cultural Transformation", "Performance Improvement"]
+          title: "Orthopedic Pillows",
+          description: "Ergonomic pillows supporting proper sleeping position.",
+          features: ["Neck support", "Memory foam", "Breathable materials", "Various firmness"]
         },
         {
-          title: "Digital Strategy",
-          description: "Leverage technology to create new opportunities and enhance customer experiences.",
-          features: ["Digital Roadmap", "Technology Assessment", "Innovation Strategy", "Digital Culture"]
+          title: "Down Pillows",
+          description: "Luxurious pillows made from natural down providing maximum comfort.",
+          features: ["Natural down", "Softness", "Temperature regulation", "Long-lasting"]
         }
       ]
     },
     {
-      category: "International Services",
-      description: "Expand your global footprint with our comprehensive international solutions.",
+      category: "Specialized Products",
+      description: "Wide range of specialized textile products adapted to various needs.",
       services: [
         {
-          title: "Market Entry Strategy",
-          description: "Successfully enter new markets with data-driven strategies and local insights.",
-          features: ["Market Research", "Regulatory Compliance", "Local Partnerships", "Risk Assessment"]
+          title: "Decorative Pillows",
+          description: "Stylish decorative pillows that give interiors an elegant character.",
+          features: ["Various patterns", "High-quality fabrics", "Color options", "Durable finish"]
         },
         {
-          title: "Cross-border Operations",
-          description: "Optimize your international operations for efficiency and growth.",
-          features: ["Supply Chain Management", "Cultural Integration", "Regulatory Navigation", "Operational Excellence"]
+          title: "Garden Textiles",
+          description: "Weather-resistant textiles for outdoor spaces.",
+          features: ["UV resistance", "Waterproof", "Easy cleaning", "Fade-resistant colors"]
         },
         {
-          title: "Global Partnership Development",
-          description: "Build strategic alliances that accelerate your international expansion.",
-          features: ["Partner Identification", "Due Diligence", "Negotiation Support", "Relationship Management"]
+          title: "Pet Products",
+          description: "Safe and comfortable textiles for your beloved pets.",
+          features: ["Safe materials", "Easy washing", "Hypoallergenic", "Durable"]
         }
       ]
     }
@@ -48,29 +105,19 @@ export default function Services() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-logo-coral-100 to-logo-coral text-white py-12 sm:py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-            Our Services
-          </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-logo-coral-100 max-w-3xl mx-auto leading-relaxed px-4">
-            Comprehensive solutions designed to drive your success in today&apos;s 
-            dynamic business environment
-          </p>
-        </div>
-      </section>
-
+      {/* Hero Video Section */}
+      <HeroVideoSection />
+    
       {/* Services Overview */}
-      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Our Products & Services
+              Our Products
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Comprehensive solutions designed to drive your success in today&apos;s 
-              dynamic business environment.
+              High-quality textile products manufactured with passion and commitment
+              for over 20 years.
             </p>
           </div>
 
@@ -116,13 +163,13 @@ export default function Services() {
             {/* Right Side - Product Images */}
             <div className="space-y-4 sm:space-y-6 order-1 lg:order-2">
               <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Service Portfolio</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Our Products</h3>
                 <div className="space-y-3 sm:space-y-4">
                   {/* Service Image 1 */}
                   <div className="rounded-lg h-36 sm:h-48 overflow-hidden shadow-md">
                     <img 
                       src="/service1.jpg" 
-                      alt="Strategic Consulting Services" 
+                      alt="Duvets and Pillows" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -131,7 +178,7 @@ export default function Services() {
                   <div className="rounded-lg h-36 sm:h-48 overflow-hidden shadow-md">
                     <img 
                       src="/service2.jpg" 
-                      alt="Digital Solutions Services" 
+                      alt="Decorative Pillows" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -140,7 +187,7 @@ export default function Services() {
                   <div className="rounded-lg h-36 sm:h-48 overflow-hidden shadow-md">
                     <img 
                       src="/service3.jpg" 
-                      alt="Global Services" 
+                      alt="Garden Textiles" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -150,32 +197,32 @@ export default function Services() {
               {/* Additional Info Box */}
               <div className="bg-logo-coral-50 rounded-xl p-4 sm:p-6">
                 <h4 className="text-base sm:text-lg font-bold text-logo-coral-dark mb-2 sm:mb-3">
-                  Why Choose Our Services?
+                  Why Choose Kamar International?
                 </h4>
                 <ul className="space-y-1 sm:space-y-2 text-logo-coral">
                   <li className="flex items-center text-xs sm:text-sm">
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Proven track record of success
+                    Over 20 years of experience
                   </li>
                   <li className="flex items-center text-xs sm:text-sm">
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Customized solutions for every client
+                    European quality standards
                   </li>
                   <li className="flex items-center text-xs sm:text-sm">
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Global expertise, local presence
+                    Family values and tradition
                   </li>
                   <li className="flex items-center text-xs sm:text-sm">
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    24/7 support and consultation
+                    Modern production technologies
                   </li>
                 </ul>
               </div>
@@ -185,20 +232,20 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-logo-coral">
+      <section className="py-16 sm:py-20 bg-logo-coral">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Collaborate?
           </h2>
           <p className="text-xl text-logo-coral-100 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how our services can help you achieve your goals and drive sustainable growth.
+            Contact us and experience the quality of our textile products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-logo-coral hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg">
-              Get Started
+              View Products
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-logo-coral px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
-              Schedule Consultation
+              Contact Us
             </button>
           </div>
         </div>
