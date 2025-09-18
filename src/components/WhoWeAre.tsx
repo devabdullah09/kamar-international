@@ -23,7 +23,7 @@ export default function WhoWeAre() {
             
             <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-6 h-6 bg-orange-300 rounded-full flex items-center justify-center mt-1">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -35,7 +35,7 @@ export default function WhoWeAre() {
               </div>
               
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-6 h-6 bg-orange-300 rounded-full flex items-center justify-center mt-1">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -47,7 +47,7 @@ export default function WhoWeAre() {
               </div>
               
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-6 h-6 bg-orange-300 rounded-full flex items-center justify-center mt-1">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -59,28 +59,26 @@ export default function WhoWeAre() {
               </div>
             </div>
 
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg w-full sm:w-auto">
+            <button className="bg-orange-300 hover:bg-orange-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg w-full sm:w-auto">
               Learn More About Us
             </button>
           </div>
 
           {/* Image Placeholder & Stats */}
           <div className="order-1 lg:order-2">
-            <div className="bg-gray-200 rounded-xl h-64 sm:h-80 lg:h-96 mb-6 sm:mb-8 flex items-center justify-center">
-              <div className="text-center text-gray-500 px-4">
-                <svg className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-base sm:text-lg font-medium">Professional Team Image</p>
-                <p className="text-xs sm:text-sm">Placeholder for company photo</p>
-              </div>
+            <div className="rounded-xl h-64 sm:h-80 lg:h-96 mb-6 sm:mb-8 overflow-hidden shadow-lg">
+              <img 
+                src="/landing-group.jpg" 
+                alt="Kamar International Professional Team" 
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">
+                  <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 font-medium text-sm sm:text-base">

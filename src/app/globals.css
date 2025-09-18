@@ -4,6 +4,7 @@
 :root {
   --background: #ffffff;
   --foreground: #1f2937;
+  --peach-pink: #F8F8F8;
 }
 
 @theme inline {
@@ -52,7 +53,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #fb923c;
   outline-offset: 2px;
 }
 

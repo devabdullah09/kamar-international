@@ -12,6 +12,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
+            <img 
+              src="/logo.jpg" 
+              alt="Kamar International" 
+              className="h-12 w-auto mr-3"
+            />
             <div className="text-2xl font-bold text-gray-900">
               Kamar International
             </div>
