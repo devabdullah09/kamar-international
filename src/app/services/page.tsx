@@ -49,12 +49,12 @@ export default function Services() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-200 to-orange-300 text-white py-12 sm:py-16 lg:py-24">
+      <section className="bg-gradient-to-r from-logo-coral-100 to-logo-coral text-white py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             Our Services
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-orange-100 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-lg sm:text-xl lg:text-2xl text-logo-coral-100 max-w-3xl mx-auto leading-relaxed px-4">
             Comprehensive solutions designed to drive your success in today&apos;s 
             dynamic business environment
           </p>
@@ -89,7 +89,7 @@ export default function Services() {
                   
                   <div className="space-y-3 sm:space-y-4">
                     {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="border-l-4 border-orange-300 pl-3 sm:pl-4">
+                      <div key={serviceIndex} className="border-l-4 border-logo-coral pl-3 sm:pl-4">
                         <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
                           {service.title}
                         </h4>
@@ -100,7 +100,7 @@ export default function Services() {
                           {service.features.slice(0, 3).map((feature, featureIndex) => (
                             <span 
                               key={featureIndex}
-                              className="bg-orange-50 text-orange-500 px-2 sm:px-3 py-1 rounded-full text-xs font-medium"
+                              className="bg-logo-coral-50 text-logo-coral px-2 sm:px-3 py-1 rounded-full text-xs font-medium"
                             >
                               {feature}
                             </span>
@@ -148,31 +148,31 @@ export default function Services() {
               </div>
 
               {/* Additional Info Box */}
-              <div className="bg-orange-50 rounded-xl p-4 sm:p-6">
-                <h4 className="text-base sm:text-lg font-bold text-orange-700 mb-2 sm:mb-3">
+              <div className="bg-logo-coral-50 rounded-xl p-4 sm:p-6">
+                <h4 className="text-base sm:text-lg font-bold text-logo-coral-dark mb-2 sm:mb-3">
                   Why Choose Our Services?
                 </h4>
-                <ul className="space-y-1 sm:space-y-2 text-orange-600">
+                <ul className="space-y-1 sm:space-y-2 text-logo-coral">
                   <li className="flex items-center text-xs sm:text-sm">
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     Proven track record of success
                   </li>
                   <li className="flex items-center text-xs sm:text-sm">
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     Customized solutions for every client
                   </li>
                   <li className="flex items-center text-xs sm:text-sm">
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     Global expertise, local presence
                   </li>
                   <li className="flex items-center text-xs sm:text-sm">
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-orange-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-logo-coral flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     24/7 support and consultation
@@ -185,19 +185,19 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-orange-300">
+      <section className="py-24 bg-logo-coral">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-logo-coral-100 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss how our services can help you achieve your goals and drive sustainable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-400 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg">
+            <button className="bg-white text-logo-coral hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg">
               Get Started
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-orange-400 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-logo-coral px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
               Schedule Consultation
             </button>
           </div>

@@ -50,7 +50,7 @@ export default function WhatWeDo() {
               key={index}
               className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             >
-              <div className="text-orange-400 mb-4 sm:mb-6 group-hover:text-orange-500 transition-colors duration-200">
+              <div className="text-logo-coral mb-4 sm:mb-6 group-hover:text-logo-coral-dark transition-colors duration-200">
                 {service.icon}
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -65,7 +65,7 @@ export default function WhatWeDo() {
 
         {/* CTA Section */}
         <div className="text-center mt-12 sm:mt-16">
-          <button className="bg-orange-300 hover:bg-orange-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg">
+          <button className="bg-logo-coral hover:bg-logo-coral-light text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg">
             Explore All Services
           </button>
         </div>

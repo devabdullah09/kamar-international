@@ -5,6 +5,11 @@
   --background: #ffffff;
   --foreground: #1f2937;
   --peach-pink: #F8F8F8;
+  --logo-coral: #F4A688;
+  --logo-coral-light: #F7B89B;
+  --logo-coral-dark: #E89470;
+  --logo-coral-50: #FDF4F0;
+  --logo-coral-100: #FCE7DD;
 }
 
 @theme inline {
@@ -53,7 +58,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #fb923c;
+  outline: 2px solid var(--logo-coral);
   outline-offset: 2px;
 }
 
@@ -64,6 +69,55 @@ select:focus {
 
 .shadow-professional-lg {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Custom logo-matching colors */
+.bg-logo-coral {
+  background-color: var(--logo-coral);
+}
+
+.bg-logo-coral-light {
+  background-color: var(--logo-coral-light);
+}
+
+.bg-logo-coral-dark {
+  background-color: var(--logo-coral-dark);
+}
+
+.bg-logo-coral-50 {
+  background-color: var(--logo-coral-50);
+}
+
+.bg-logo-coral-100 {
+  background-color: var(--logo-coral-100);
+}
+
+.text-logo-coral {
+  color: var(--logo-coral);
+}
+
+.text-logo-coral-light {
+  color: var(--logo-coral-light);
+}
+
+.text-logo-coral-dark {
+  color: var(--logo-coral-dark);
+}
+
+.border-logo-coral {
+  border-color: var(--logo-coral);
+}
+
+.hover\:bg-logo-coral-light:hover {
+  background-color: var(--logo-coral-light);
+}
+
+.hover\:text-logo-coral-dark:hover {
+  color: var(--logo-coral-dark);
+}
+
+.focus\:ring-logo-coral:focus {
+  --tw-ring-color: var(--logo-coral);
 }
 
 /* Animation for scroll indicator */

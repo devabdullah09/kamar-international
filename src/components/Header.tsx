@@ -13,7 +13,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="Kamar International" 
               className="h-12 w-auto mr-3"
             />

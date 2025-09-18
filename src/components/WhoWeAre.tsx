@@ -23,7 +23,7 @@ export default function WhoWeAre() {
             
             <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 bg-orange-300 rounded-full flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-6 h-6 bg-logo-coral rounded-full flex items-center justify-center mt-1">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -35,7 +35,7 @@ export default function WhoWeAre() {
               </div>
               
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 bg-orange-300 rounded-full flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-6 h-6 bg-logo-coral rounded-full flex items-center justify-center mt-1">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -47,7 +47,7 @@ export default function WhoWeAre() {
               </div>
               
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 bg-orange-300 rounded-full flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-6 h-6 bg-logo-coral rounded-full flex items-center justify-center mt-1">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -59,7 +59,7 @@ export default function WhoWeAre() {
               </div>
             </div>
 
-            <button className="bg-orange-300 hover:bg-orange-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg w-full sm:w-auto">
+            <button className="bg-logo-coral hover:bg-logo-coral-light text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 shadow-lg w-full sm:w-auto">
               Learn More About Us
             </button>
           </div>
@@ -78,7 +78,7 @@ export default function WhoWeAre() {
             <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1 sm:mb-2">
+                  <div className="text-2xl sm:text-3xl font-bold text-logo-coral mb-1 sm:mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-600 font-medium text-sm sm:text-base">

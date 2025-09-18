@@ -84,12 +84,12 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-200 to-orange-300 text-white py-12 sm:py-16 lg:py-24">
+      <section className="bg-gradient-to-r from-logo-coral-100 to-logo-coral text-white py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             Contact Us
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-orange-100 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-lg sm:text-xl lg:text-2xl text-logo-coral-100 max-w-3xl mx-auto leading-relaxed px-4">
             Ready to transform your vision into reality? Let&apos;s start the conversation.
           </p>
         </div>
@@ -117,7 +117,7 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-300 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-logo-coral focus:border-transparent transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-300 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-logo-coral focus:border-transparent transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -149,7 +149,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-300 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-logo-coral focus:border-transparent transition-colors"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-300 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-logo-coral focus:border-transparent transition-colors"
                       placeholder="Your company name"
                     />
                   </div>
@@ -178,7 +178,7 @@ export default function Contact() {
                     name="department"
                     value={formData.department}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-300 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-logo-coral focus:border-transparent transition-colors"
                   >
                     <option value="">Select a department</option>
                     {departments.map((dept, index) => (
@@ -198,14 +198,14 @@ export default function Contact() {
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-300 focus:border-transparent transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-logo-coral focus:border-transparent transition-colors resize-none"
                     placeholder="Tell us about your project or inquiry..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-orange-300 hover:bg-orange-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg"
+                  className="w-full bg-logo-coral hover:bg-logo-coral-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 shadow-lg"
                 >
                   Send Message
                 </button>
@@ -225,7 +225,7 @@ export default function Contact() {
               <div className="space-y-8">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-orange-300 rounded-lg flex items-center justify-center text-white">
+                    <div className="flex-shrink-0 w-12 h-12 bg-logo-coral rounded-lg flex items-center justify-center text-white">
                       {info.icon}
                     </div>
                     <div className="ml-4">
@@ -233,7 +233,7 @@ export default function Contact() {
                         {info.title}
                       </h3>
                       {info.subtitle && (
-                        <p className="text-sm text-orange-400 font-medium mb-2">
+                        <p className="text-sm text-logo-coral font-medium mb-2">
                           {info.subtitle}
                         </p>
                       )}
